@@ -50,7 +50,7 @@ app.get('/api/screenshot', async (req, res) => {
         return res.send(screenshotFromCache);
     }
     // If not, take the screenshot
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'],ignoreDefaultArgs: ['--disable-extensions'] });
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
     await page.goto(url);
@@ -387,7 +387,8 @@ app.get('/api/unmorseify', (req, res) => {
 });
 
 // Server
-const PORT = process.env.PORT
+const PORT = 3030;
+
 app.listen(PORT, () => {
     console.log(`Dhyan99API Running On Port ${PORT}`);
 });
