@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* center the QR code on the screen */
+      #qr-code {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh; /* 100% of the viewport height */
+      }
+
+      /* make the QR code larger */
+      img {
+        width: 25%; /* half the width of the viewport */
+        height: auto;
+      }
+
+    .download-button {
+        display: inline-block;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #66c2e1; /* Light blue */
+        color: white;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    /* Center the button */
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+    }
+    </style>
+  </head>
+  <body>
+ 
+    <div id="qr-code">
+      <img src="<%=qr%>" alt="QR code"/>
+    </div>
+    <div class="center">
+    <a href="<%= qr %>" download="qr.png" class="download-button">Download QR Code</a>
+  </div>
+  </body>
+</html>
