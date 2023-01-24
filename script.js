@@ -1,8 +1,7 @@
 // Server Imports
 const express = require('express');
 const rateLimit = require("express-rate-limit");
-const ejs = require('ejs');
-const path = require('path');
+
 const subdomain = require("express-subdomain")
 
 
@@ -15,6 +14,8 @@ const Jimp = require("jimp");
 const axios = require('axios');
 const request = require('request');
 const mime = require("mime-types")
+const ejs = require('ejs');
+const path = require('path');
 
 // Configs
 const app = express();
