@@ -387,8 +387,7 @@ app.get('/api/unmorseify', (req, res) => {
 });
 
 // Server
-const PORT = 3030;
 
-app.listen(PORT, () => {
-    console.log(`Dhyan99API Running On Port ${PORT}`);
+app.listen($PORT, () => {
+    console.log(`Dhyan99API Running On Port ${$PORT}`);
 });
