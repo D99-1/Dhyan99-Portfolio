@@ -31,7 +31,7 @@ app.use("/api/screenshot", limiter);
 
 // Website
 app.get("/", (req,res)=>{
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.status(200).sendFile(path.join(__dirname+'/index.html'));
 })
 
 // Website Screenshotter
@@ -390,5 +390,5 @@ app.get('/api/unmorseify', (req, res) => {
 const PORT = 3030;
 
 app.listen(PORT, () => {
-    console.log('Dhyan99API Running On Port PORT');
+    console.log(`Dhyan99API Running On Port ${PORT}`);
 });
